@@ -1,0 +1,112 @@
+:root {
+  font-family: 'Chivo', sans-serif;
+  font-size: 1em;
+  --green: #54e6af;
+  --blue-950: #121725;
+  --blue-900: #2c344b;
+  --blue-600: #5a668a;
+  --blue-300: #c2cbe5;
+  --white: #fff;
+  --red: #fb3e3e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('assets/mobile/image-host.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+
+body::after {
+  content: '';
+  background-color: #121725e1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+main {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  margin-bottom: 3em;
+}
+
+.title {
+  color: var(--green);
+  font-size: 2.6rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 0.6em;
+}
+
+.everywhere {
+  color: var(--white);
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.4em;
+  font-weight: 100;
+  text-align: center;
+  color: var(--blue-300);
+  margin-bottom: 3em;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.app {
+  width: 4em;
+}
+
+#email {
+  width: 100%;
+  padding: 1.1em;
+  border-radius: 2em;
+  background-color: #2c344b;
+  border: none;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+
+.email::placeholder {
+  color: var(--blue-300);
+  padding-left: 1.4em;
+}
+
+.btn {
+  width: 100%;
+  padding: 1.1em;
+  border-radius: 2em;
+  background-color: var(--green);
+  border: none;
+  font-size: 1em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
