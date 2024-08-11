@@ -1,25 +1,18 @@
-'use strict';
-
+var error = document.querySelector('.error-message');
+var emailInput = document.getElementById('email');
+var email = emailInput.value;
+var btn = document.querySelector('.btn');
 function validateEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  const emailInput = document.getElementById('email');
-  const email = emailInput.value.trim();
-
-  if (email === '') {
-    console.error('Oops! Please add your email');
-  } else if (!validateEmail(email)) {
-    console.error('Oops! Please check your email');
+btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (!validateEmail(email)) {
+    // Email is invalid
+    error.classList.remove('hidden');
+    emailInput.style.border = '0.2em solid red';
   } else {
-    console.log('Email is valid:', email);
+    error.classList.add('hidden');
   }
-}
-
-// Assuming you have a form with an id of 'myForm' and an email input with id 'email'
-const form = document.getElementById('myForm');
-form.addEventListener('submit', handleSubmit);
+});

@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -109,4 +110,12 @@ main {
   font-size: 1em;
   font-weight: 700;
   margin-bottom: 0.6em;
+}
+
+.hidden {
+  display: none;
+}
+.error-message {
+  color: var(--red);
+  font-weight: 600;
 }
